@@ -32,37 +32,6 @@ static int	ft_atoi(const char *str)
 	return (res * sign);
 }
 
-/*********************************************************
-	QUESTO FT_ATOI HA QUALCHE PROBLEMA CON LA CONVERSIONE
-	DI VALORI DA TERMINALE: DA SISTEMARE
-**********************************************************/
-/*
-static int	ft_atoi(const char *str)
-{
-	int		i;
-	int		res;
-	int		sign;
-
-	res = 0;
-	sign = 1;
-	i = -1;
-	while ((str[++i] >= '\t' && str[i] <= '\r') || str[i] == 32)
-		;
-	if (str[++i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			sign = -1;
-	}
-	while (str[++i] >= '0' && str[i] <= '9')
-		res = (str[i] - 48) + (res * 10);
-	if (res < INT_MIN || res > INT_MAX)
-	{
-		printf("Il valore e' troppo grande/piccolo\n");
-		exit(1);
-	}
-	return (res * sign);
-}*/
-
 // stampa dei nodi
 static void	print_list(t_node *node)
 {
